@@ -16,6 +16,8 @@
         android:background="@drawable/bg_search_bar"
         android:drawableStart="@drawable/ic_search"
         android:drawablePadding="16dp"
+        android:inputType="text"
+        android:maxLines="1"
         android:paddingStart="16dp"
         android:paddingEnd="16dp"
         app:layout_constraintEnd_toEndOf="parent"
