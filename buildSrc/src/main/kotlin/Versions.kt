@@ -19,6 +19,9 @@ object Versions {
     const val retrofitVersion = "2.9.0"
     const val moshiVersion = "1.12.0"
 
+    // Room
+    const val roomVersion = "2.1.0"
+
     // Test
     const val jUnitVersion = "4.13.2"
     const val jUnitTestVersion = "1.1.3"

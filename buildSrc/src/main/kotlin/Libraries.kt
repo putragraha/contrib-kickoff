@@ -29,6 +29,11 @@ object Libraries {
     const val moshi = "com.squareup.moshi:moshi-kotlin:${Versions.moshiVersion}"
     const val moshiCodeGen = "com.squareup.moshi:moshi-kotlin-codegen:${Versions.moshiVersion}"
 
+    // Room
+    const val roomKtx = "androidx.room:room-ktx:${Versions.roomVersion}"
+    const val roomRuntime = "androidx.room:room-runtime:${Versions.roomVersion}"
+    const val roomCompiler = "androidx.room:room-compiler:${Versions.roomVersion}"
+
     // Test
     const val jUnit = "junit:junit:${Versions.jUnitVersion}"
     const val jUnitTest = "androidx.test.ext:junit:${Versions.jUnitTestVersion}"

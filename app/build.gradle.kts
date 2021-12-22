@@ -56,6 +56,11 @@ dependencies {
     implementation(Libraries.moshi)
     kapt(Libraries.moshiCodeGen)
 
+    // Room
+    implementation(Libraries.roomKtx)
+    implementation(Libraries.roomRuntime)
+    kapt(Libraries.roomCompiler)
+
     // Test
     testImplementation(Libraries.jUnit)
     androidTestImplementation(Libraries.jUnitTest)
