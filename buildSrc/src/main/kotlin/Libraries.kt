@@ -34,6 +34,10 @@ object Libraries {
     const val roomRuntime = "androidx.room:room-runtime:${Versions.roomVersion}"
     const val roomCompiler = "androidx.room:room-compiler:${Versions.roomVersion}"
 
+    // Dependency Injection
+    const val hilt = "com.google.dagger:hilt-android:${Versions.hiltVersion}"
+    const val hiltCompiler = "com.google.dagger:hilt-compiler:${Versions.hiltVersion}"
+
     // Test
     const val jUnit = "junit:junit:${Versions.jUnitVersion}"
     const val jUnitTest = "androidx.test.ext:junit:${Versions.jUnitTestVersion}"

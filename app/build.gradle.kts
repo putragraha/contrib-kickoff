@@ -61,6 +61,10 @@ dependencies {
     implementation(Libraries.roomRuntime)
     kapt(Libraries.roomCompiler)
 
+    // Dependency Injection
+    implementation (Libraries.hilt)
+    kapt(Libraries.hiltCompiler)
+
     // Test
     testImplementation(Libraries.jUnit)
     androidTestImplementation(Libraries.jUnitTest)

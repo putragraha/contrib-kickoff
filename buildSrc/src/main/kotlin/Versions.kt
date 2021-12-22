@@ -22,6 +22,9 @@ object Versions {
     // Room
     const val roomVersion = "2.1.0"
 
+    // Dependency Injection
+    const val hiltVersion = "2.36"
+
     // Test
     const val jUnitVersion = "4.13.2"
     const val jUnitTestVersion = "1.1.3"
