@@ -12,6 +12,9 @@ object Versions {
     const val materialDesignVersion = "1.4.0"
     const val constrainLayoutVersion = "2.1.2"
 
+    // Jetpack Navigation
+    const val navigationVersion = "2.3.5"
+
     // Test
     const val jUnitVersion = "4.13.2"
     const val jUnitTestVersion = "1.1.3"

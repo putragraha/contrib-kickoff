@@ -16,6 +16,12 @@ object Libraries {
     const val constraintLayout =
         "androidx.constraintlayout:constraintlayout:${Versions.constrainLayoutVersion}"
 
+    // Navigation
+    const val navigationFragment =
+        "androidx.navigation:navigation-fragment-ktx:${Versions.navigationVersion}"
+    const val navigationUi =
+        "androidx.navigation:navigation-ui-ktx:${Versions.navigationVersion}"
+
     // Test
     const val jUnit = "junit:junit:${Versions.jUnitVersion}"
     const val jUnitTest = "androidx.test.ext:junit:${Versions.jUnitTestVersion}"

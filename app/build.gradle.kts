@@ -41,6 +41,8 @@ dependencies {
     implementation(Libraries.appCompat)
     implementation(Libraries.materialDesign)
     implementation(Libraries.constraintLayout)
+    implementation(Libraries.navigationFragment)
+    implementation(Libraries.navigationUi)
     testImplementation(Libraries.jUnit)
     androidTestImplementation(Libraries.jUnitTest)
     androidTestImplementation(Libraries.espresso)
