@@ -37,17 +37,26 @@ android {
 }
 
 dependencies {
+    // Core
     implementation(Libraries.kotlinStdLib)
     implementation(Libraries.coreKtx)
     implementation(Libraries.appCompat)
+
+    // Design
     implementation(Libraries.materialDesign)
     implementation(Libraries.constraintLayout)
+
+    // Navigation
     implementation(Libraries.navigationFragment)
     implementation(Libraries.navigationUi)
+
+    // Network
     implementation(Libraries.retrofit)
     implementation(Libraries.retrofitConverterMoshi)
     implementation(Libraries.moshi)
     kapt(Libraries.moshiCodeGen)
+
+    // Test
     testImplementation(Libraries.jUnit)
     androidTestImplementation(Libraries.jUnitTest)
     androidTestImplementation(Libraries.espresso)
