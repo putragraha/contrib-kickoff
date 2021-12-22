@@ -22,6 +22,13 @@ object Libraries {
     const val navigationUi =
         "androidx.navigation:navigation-ui-ktx:${Versions.navigationVersion}"
 
+    // Network
+    const val retrofit = "com.squareup.retrofit2:retrofit:${Versions.retrofitVersion}"
+    const val retrofitConverterMoshi =
+        "com.squareup.retrofit2:converter-moshi:${Versions.retrofitVersion}"
+    const val moshi = "com.squareup.moshi:moshi-kotlin:${Versions.moshiVersion}"
+    const val moshiCodeGen = "com.squareup.moshi:moshi-kotlin-codegen:${Versions.moshiVersion}"
+
     // Test
     const val jUnit = "junit:junit:${Versions.jUnitVersion}"
     const val jUnitTest = "androidx.test.ext:junit:${Versions.jUnitTestVersion}"

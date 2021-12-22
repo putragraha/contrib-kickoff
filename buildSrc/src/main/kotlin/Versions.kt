@@ -15,6 +15,10 @@ object Versions {
     // Jetpack Navigation
     const val navigationVersion = "2.3.5"
 
+    // Network
+    const val retrofitVersion = "2.9.0"
+    const val moshiVersion = "1.12.0"
+
     // Test
     const val jUnitVersion = "4.13.2"
     const val jUnitTestVersion = "1.1.3"

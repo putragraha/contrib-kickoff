@@ -1,6 +1,7 @@
 plugins {
     id("com.android.application")
     id("kotlin-android")
+    id("kotlin-kapt")
 }
 
 android {
@@ -43,6 +44,10 @@ dependencies {
     implementation(Libraries.constraintLayout)
     implementation(Libraries.navigationFragment)
     implementation(Libraries.navigationUi)
+    implementation(Libraries.retrofit)
+    implementation(Libraries.retrofitConverterMoshi)
+    implementation(Libraries.moshi)
+    kapt(Libraries.moshiCodeGen)
     testImplementation(Libraries.jUnit)
     androidTestImplementation(Libraries.jUnitTest)
     androidTestImplementation(Libraries.espresso)
