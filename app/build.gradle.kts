@@ -68,6 +68,10 @@ dependencies {
     implementation (Libraries.hilt)
     kapt(Libraries.hiltCompiler)
 
+    // Image Load
+    implementation(Libraries.glide)
+    kapt(Libraries.glideCompiler)
+
     // Test
     testImplementation(Libraries.jUnit)
     androidTestImplementation(Libraries.jUnitTest)

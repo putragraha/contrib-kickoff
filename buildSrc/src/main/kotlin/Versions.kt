@@ -25,6 +25,9 @@ object Versions {
     // Dependency Injection
     const val hiltVersion = "2.36"
 
+    // Image Load
+    const val glideVersion = "4.12.0"
+
     // Test
     const val jUnitVersion = "4.13.2"
     const val jUnitTestVersion = "1.1.3"
