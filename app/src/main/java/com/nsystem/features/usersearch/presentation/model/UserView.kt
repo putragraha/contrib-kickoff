@@ -1,6 +1,6 @@
 package com.nsystem.features.usersearch.presentation.model
 
-data class User(
+data class UserView(
     val username: String,
     val name: String,
     val bio: String,
