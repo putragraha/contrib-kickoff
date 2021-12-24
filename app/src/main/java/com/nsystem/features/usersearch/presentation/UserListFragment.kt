@@ -1,4 +1,4 @@
-package com.nsystem.user
+package com.nsystem.features.usersearch.presentation
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

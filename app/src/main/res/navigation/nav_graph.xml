@@ -6,6 +6,6 @@
 
     <fragment
         android:id="@+id/userListFragment"
-        android:name="com.nsystem.user.UserListFragment"
+        android:name="com.nsystem.features.usersearch.presentation.UserListFragment"
         android:label="UserListFragment" />
 </navigation>
