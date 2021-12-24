@@ -29,7 +29,7 @@
         tools:text="Wang Shi Eun" />
 
     <TextView
-        android:id="@+id/tv_id"
+        android:id="@+id/tv_username"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
