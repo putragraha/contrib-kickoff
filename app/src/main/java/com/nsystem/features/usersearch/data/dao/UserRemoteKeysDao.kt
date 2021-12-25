@@ -4,16 +4,16 @@ import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
-import com.nsystem.features.usersearch.data.model.UserRemoteKeysEntity
+import com.nsystem.features.usersearch.data.model.UserRemoteKeys
 
 @Dao
 interface UserRemoteKeysDao {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun insertAll(userRemoteKeys: List<UserRemoteKeysEntity>)
+    suspend fun insertAll(userRemoteKeys: List<UserRemoteKeys>)
 
     @Query("SELECT * FROM user_remote_keys WHERE username = :username")
-    suspend fun getUserRemoteKeys(username: String): UserRemoteKeysEntity?
+    suspend fun getUserRemoteKeys(username: String): UserRemoteKeys?
 
     @Query("DELETE FROM user_remote_keys")
     suspend fun clearUserRemoteKeys()
