@@ -1,0 +1,27 @@
+package com.nsystem.features.usersearch.data.dao
+
+import androidx.paging.PagingSource
+import androidx.room.Dao
+import androidx.room.Insert
+import androidx.room.OnConflictStrategy
+import androidx.room.Query
+import com.nsystem.features.usersearch.data.model.User
+
+@Dao
+interface UserDao {
+
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun insertAll(repos: List<User>)
+
+    @Query("SELECT * FROM user WHERE " +
+            "login LIKE :queryString OR " +
+            "name LIKE :queryString OR " +
+            "company LIKE :queryString OR " +
+            "blog LIKE :queryString OR " +
+            "location LIKE :queryString OR " +
+            "email LIKE :queryString OR " +
+            "bio LIKE :queryString OR " +
+            "twitter_username LIKE :queryString " +
+            "ORDER BY followers DESC")
+    fun reposByName(queryString: String): PagingSource<Int, User>
+}

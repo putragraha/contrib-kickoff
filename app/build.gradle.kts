@@ -65,6 +65,7 @@ dependencies {
     // Room
     implementation(Libraries.roomKtx)
     implementation(Libraries.roomRuntime)
+    implementation(Libraries.roomPaging)
     kapt(Libraries.roomCompiler)
 
     // Dependency Injection
