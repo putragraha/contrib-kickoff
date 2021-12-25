@@ -24,4 +24,7 @@ interface UserDao {
             "twitter_username LIKE :queryString " +
             "ORDER BY followers DESC")
     fun reposByName(queryString: String): PagingSource<Int, User>
+
+    @Query("DELETE FROM user")
+    suspend fun clearUsers()
 }
