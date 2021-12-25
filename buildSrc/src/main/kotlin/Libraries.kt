@@ -11,6 +11,7 @@ object Libraries {
     const val kotlinStdLib = "org.jetbrains.kotlin:kotlin-stdlib:${Versions.kotlinVersion}"
     const val coreKtx = "androidx.core:core-ktx:${Versions.coreKtxVersion}"
     const val appCompat = "androidx.appcompat:appcompat:${Versions.appCompatVersion}"
+    const val multidex = "androidx.multidex:multidex:${Versions.multidexVersion}"
 
     // Design
     const val materialDesign =

@@ -15,6 +15,7 @@ android {
         targetSdkVersion(Configs.targetSdkVersion)
         versionCode = Configs.versionCode
         versionName = Configs.versionName
+        multiDexEnabled = true
 
         testInstrumentationRunner(Configs.testInstrumentationRunner)
     }
@@ -45,6 +46,7 @@ dependencies {
     implementation(Libraries.kotlinStdLib)
     implementation(Libraries.coreKtx)
     implementation(Libraries.appCompat)
+    implementation(Libraries.multidex)
 
     // Design
     implementation(Libraries.materialDesign)

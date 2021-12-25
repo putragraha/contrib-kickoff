@@ -8,6 +8,7 @@ object Versions {
     const val kotlinVersion = "1.4.32"
     const val coreKtxVersion = "1.7.0"
     const val appCompatVersion = "1.4.0"
+    const val multidexVersion = "2.0.1"
 
     // Design
     const val materialDesignVersion = "1.4.0"
