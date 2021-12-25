@@ -42,6 +42,9 @@ object Libraries {
     const val glide = "com.github.bumptech.glide:glide:${Versions.glideVersion}"
     const val glideCompiler = "com.github.bumptech.glide:compiler:${Versions.glideVersion}"
 
+    // Paging
+    const val paging = "androidx.paging:paging-runtime:${Versions.pagingVersion}"
+
     // Test
     const val jUnit = "junit:junit:${Versions.jUnitVersion}"
     const val jUnitTest = "androidx.test.ext:junit:${Versions.jUnitTestVersion}"

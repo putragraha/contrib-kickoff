@@ -28,6 +28,9 @@ object Versions {
     // Image Load
     const val glideVersion = "4.12.0"
 
+    // Paging
+    const val pagingVersion = "3.1.0"
+
     // Test
     const val jUnitVersion = "4.13.2"
     const val jUnitTestVersion = "1.1.3"

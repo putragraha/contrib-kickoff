@@ -72,6 +72,9 @@ dependencies {
     implementation(Libraries.glide)
     kapt(Libraries.glideCompiler)
 
+    // Paging
+    implementation(Libraries.paging)
+
     // Test
     testImplementation(Libraries.jUnit)
     androidTestImplementation(Libraries.jUnitTest)
