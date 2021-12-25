@@ -2,10 +2,9 @@ object Versions {
 
     // Classpath Gradle Plugin
     const val classpathGradleVersion = "4.1.3"
-    const val classpathHiltVersion = "2.38.1"
 
     // Core
-    const val kotlinVersion = "1.4.32"
+    const val kotlinVersion = "1.5.31"
     const val coreKtxVersion = "1.7.0"
     const val appCompatVersion = "1.4.0"
     const val multidexVersion = "2.0.1"
@@ -22,7 +21,7 @@ object Versions {
     const val moshiVersion = "1.12.0"
 
     // Room
-    const val roomVersion = "2.1.0"
+    const val roomVersion = "2.4.0"
 
     // Dependency Injection
     const val hiltVersion = "2.36"
