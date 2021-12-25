@@ -12,8 +12,8 @@ interface UserRemoteKeysDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertAll(userRemoteKeys: List<UserRemoteKeys>)
 
-    @Query("SELECT * FROM user_remote_keys WHERE username = :username")
-    suspend fun getUserRemoteKeys(username: String): UserRemoteKeys?
+    @Query("SELECT * FROM user_remote_keys WHERE login = :login")
+    suspend fun getUserRemoteKeys(login: String): UserRemoteKeys?
 
     @Query("DELETE FROM user_remote_keys")
     suspend fun clearUserRemoteKeys()
