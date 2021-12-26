@@ -8,6 +8,7 @@ buildscript {
         classpath(Libraries.classpathGradle)
         classpath(Libraries.classpathKotlinGradle)
         classpath(Libraries.classpathHilt)
+        classpath(Libraries.classpathNavigationSafeArgs)
     }
 }
 

@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import androidx.core.widget.addTextChangedListener
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
+import androidx.navigation.fragment.findNavController
 import androidx.paging.ExperimentalPagingApi
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.RecyclerView
@@ -27,7 +28,10 @@ class UserListFragment: Fragment() {
     private val viewModel by viewModels<UserSearchViewModel>()
 
     private val userAdapter by lazy {
-        UserAdapter()
+        UserAdapter {
+            val action = UserListFragmentDirections.actionUserListFragmentToUserDetailFragment(it)
+            findNavController().navigate(action)
+        }
     }
 
     override fun onCreateView(

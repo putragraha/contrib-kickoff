@@ -25,6 +25,9 @@ interface UserDao {
             "ORDER BY followers DESC")
     fun getUsers(queryString: String): PagingSource<Int, User>
 
+    @Query("SELECT * FROM user WHERE login=:username")
+    suspend fun getUser(username: String): User
+
     @Query("DELETE FROM user")
     suspend fun clearUsers()
 }

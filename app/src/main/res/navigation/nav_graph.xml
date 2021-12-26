@@ -7,5 +7,19 @@
     <fragment
         android:id="@+id/userListFragment"
         android:name="com.nsystem.features.usersearch.presentation.fragment.UserListFragment"
-        android:label="UserListFragment" />
+        android:label="UserListFragment" >
+        <action
+            android:id="@+id/action_userListFragment_to_userDetailFragment"
+            app:destination="@id/userDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/userDetailFragment"
+        android:name="com.nsystem.features.usersearch.presentation.fragment.UserDetailFragment"
+        android:label="UserDetailFragment">
+
+        <argument
+            android:name="username"
+            app:argType="string"
+            app:nullable="false" />
+    </fragment>
 </navigation>

@@ -8,6 +8,7 @@ import com.nsystem.core.ApplicationDatabase
 import com.nsystem.features.usersearch.data.api.UserApi
 import com.nsystem.features.usersearch.data.model.User
 import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.flowOf
 import javax.inject.Inject
 
 class UserSearchRepository @Inject constructor(
@@ -30,6 +31,10 @@ class UserSearchRepository @Inject constructor(
             pagingSourceFactory = pagingSourceFactory
         ).flow
     }
+
+    suspend fun getUser(username: String) = flowOf(
+        applicationDatabase.userDao().getUser(username)
+    )
 
     companion object {
         const val DEFAULT_PAGE_SIZE = 10

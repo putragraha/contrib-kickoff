@@ -5,6 +5,8 @@ object Libraries {
     const val classpathKotlinGradle =
         "org.jetbrains.kotlin:kotlin-gradle-plugin:${Versions.kotlinVersion}"
     const val classpathHilt = "com.google.dagger:hilt-android-gradle-plugin:${Versions.hiltVersion}"
+    const val classpathNavigationSafeArgs =
+        "androidx.navigation:navigation-safe-args-gradle-plugin:${Versions.navigationVersion}"
 
     // Core
     const val kotlinStdLib = "org.jetbrains.kotlin:kotlin-stdlib:${Versions.kotlinVersion}"
