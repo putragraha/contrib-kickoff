@@ -1,5 +1,6 @@
 package com.nsystem.features.usersearch.di
 
+import com.nsystem.features.usersearch.data.api.RepoApi
 import com.nsystem.features.usersearch.data.api.UserApi
 import dagger.Module
 import dagger.Provides
@@ -15,4 +16,8 @@ class ApiModule {
     @Provides
     @ViewModelScoped
     fun provideUserApi(retrofit: Retrofit) = retrofit.create(UserApi::class.java)
+
+    @Provides
+    @ViewModelScoped
+    fun provideRepoApi(retrofit: Retrofit) = retrofit.create(RepoApi::class.java)
 }

@@ -11,6 +11,7 @@ import androidx.navigation.fragment.navArgs
 import com.bumptech.glide.Glide
 import com.nsystem.databinding.FragmentUserDetailBinding
 import com.nsystem.features.usersearch.data.model.User
+import com.nsystem.features.usersearch.presentation.adapter.RepoAdapter
 import com.nsystem.features.usersearch.presentation.viewmodel.UserDetailViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -23,6 +24,10 @@ class UserDetailFragment: Fragment() {
 
     private val viewModel by viewModels<UserDetailViewModel>()
 
+    private val repoAdapter by lazy {
+        RepoAdapter()
+    }
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -34,9 +39,10 @@ class UserDetailFragment: Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        viewModel.getUser(args.username)
+        initView()
         initObserver()
-        // TODO: 26/12/21 Get repo list from API
+        viewModel.getUser(args.username)
+        viewModel.getUserRepo(args.username)
     }
 
     override fun onDestroyView() {
@@ -44,16 +50,28 @@ class UserDetailFragment: Fragment() {
         binding = null
     }
 
+    private fun initView() {
+        binding?.rvRepo?.adapter = repoAdapter
+    }
+
     private fun initObserver() {
-        viewModel.usersLiveData.observe(viewLifecycleOwner) {
+        viewModel.userLiveData.observe(viewLifecycleOwner) {
             showUserDetail(it)
+        }
+        viewModel.reposLiveData.observe(viewLifecycleOwner) {
+            repoAdapter.avatarUrl = viewModel.avatarUrl
+            repoAdapter.submitList(it)
         }
     }
 
     private fun showUserDetail(user: User) {
         binding?.apply {
-            val followersLabel = "${(user.followers / 1_000)}K Followers"
-            val followingLabel = "${(user.following / 1_000)}K Following"
+            val followersLabel = "${
+                if (user.followers > 1_000) (user.followers / 1_000) else user.followers
+            }K Followers"
+            val followingLabel = "${
+                if (user.following > 1_000) (user.following / 1_000) else user.following
+            }K Following"
 
             sivAvatar.loadImage(user.avatarUrl)
             tvName.text = user.name

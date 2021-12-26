@@ -22,7 +22,18 @@ android {
     }
 
     buildTypes {
+        val userAgent = "\"${CredentialHelper.getValue(CredentialHelper.KEY_USER_AGENT)}\""
+        val oauthToken = "\"${CredentialHelper.getValue(CredentialHelper.KEY_OAUTH_TOKEN)}\""
+
+        getByName("debug") {
+            buildConfigField("String", CredentialHelper.KEY_USER_AGENT, userAgent)
+            buildConfigField("String", CredentialHelper.KEY_OAUTH_TOKEN, oauthToken)
+        }
+
         getByName("release") {
+            buildConfigField("String", CredentialHelper.KEY_USER_AGENT, userAgent)
+            buildConfigField("String", CredentialHelper.KEY_OAUTH_TOKEN, oauthToken)
+
             isMinifyEnabled = false
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),

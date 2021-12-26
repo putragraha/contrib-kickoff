@@ -4,6 +4,7 @@ import android.content.Context
 import androidx.room.Room
 import com.nsystem.core.ApplicationDatabase
 import com.nsystem.core.Constants
+import com.nsystem.core.interceptor.HeaderInterceptor
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -30,6 +31,7 @@ class CoreModule {
     @Singleton
     fun provideOkHttpClient(): OkHttpClient {
         return OkHttpClient.Builder()
+            .addInterceptor(HeaderInterceptor())
             .build()
     }
 
