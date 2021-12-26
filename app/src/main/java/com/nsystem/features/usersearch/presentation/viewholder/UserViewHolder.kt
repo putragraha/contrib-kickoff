@@ -4,19 +4,21 @@ import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.nsystem.databinding.ItemUserResultBinding
-import com.nsystem.features.usersearch.presentation.model.UserView
+import com.nsystem.features.usersearch.data.model.User
 
 class UserViewHolder(
     private val binding: ItemUserResultBinding
 ): RecyclerView.ViewHolder(binding.root) {
 
-    fun bind(userView: UserView) = with(binding) {
-        tvName.text = userView.name
-        tvUsername.text = userView.username
-        tvBio.text = userView.bio
-        tvLocation.text = userView.location
-        tvEmail.text = userView.email
-        sivAvatar.loadImage(userView.avatarUrl)
+    fun bind(user: User) = with(binding) {
+        val username = "@${user.login}"
+
+        tvName.text = user.name
+        tvUsername.text = username
+        tvBio.text = user.bio
+        tvLocation.text = user.location
+        tvEmail.text = user.email
+        sivAvatar.loadImage(user.avatarUrl)
     }
 
     private fun ImageView.loadImage(url: String) {

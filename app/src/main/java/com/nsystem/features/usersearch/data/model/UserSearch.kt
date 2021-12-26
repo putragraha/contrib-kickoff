@@ -4,8 +4,8 @@ import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
 
 @JsonClass(generateAdapter = true)
-data class UserSearchResponse(
+data class UserSearch(
     @Json(name = "total_count") val totalCount: Long,
-    @Json(name = "incomplete_results") val incompleteResults: String,
-    @Json(name = "items") val items: List<UserSearchItemsResponse>
+    @Json(name = "incomplete_results") val incompleteResults: Boolean,
+    @Json(name = "items") val items: List<UserSearchItems>
 )

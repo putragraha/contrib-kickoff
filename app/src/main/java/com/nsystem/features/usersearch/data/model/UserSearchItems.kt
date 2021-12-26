@@ -4,7 +4,7 @@ import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
 
 @JsonClass(generateAdapter = true)
-data class UserSearchItemsResponse(
+data class UserSearchItems(
     @Json(name = "login") val login: String,
     @Json(name = "id") val id: Long,
     @Json(name = "node_id") val nodeId: String,
@@ -12,7 +12,7 @@ data class UserSearchItemsResponse(
     @Json(name = "gravatar_id") val gravatarId: String,
     @Json(name = "url") val url: String,
     @Json(name = "html_url") val htmlUrl: String,
-    @Json(name = "follower_url") val followerUrl: String,
+    @Json(name = "followers_url") val followersUrl: String,
     @Json(name = "following_url") val followingUrl: String,
     @Json(name = "gists_url") val gistsUrl: String,
     @Json(name = "starred_url") val starredUrl: String,
@@ -22,6 +22,6 @@ data class UserSearchItemsResponse(
     @Json(name = "events_url") val eventsUrl: String,
     @Json(name = "received_events_url") val receivedEventsUrl: String,
     @Json(name = "type") val type: String,
-    @Json(name = "site_admin") val siteAdmin: String,
+    @Json(name = "site_admin") val siteAdmin: Boolean,
     @Json(name = "score") val score: Double
 )

@@ -11,7 +11,7 @@ import com.nsystem.features.usersearch.data.model.User
 interface UserDao {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun insertAll(repos: List<User>)
+    suspend fun insertAll(repos: List<User?>)
 
     @Query("SELECT * FROM user WHERE " +
             "login LIKE :queryString OR " +
@@ -23,7 +23,7 @@ interface UserDao {
             "bio LIKE :queryString OR " +
             "twitter_username LIKE :queryString " +
             "ORDER BY followers DESC")
-    fun reposByName(queryString: String): PagingSource<Int, User>
+    fun getUsers(queryString: String): PagingSource<Int, User>
 
     @Query("DELETE FROM user")
     suspend fun clearUsers()

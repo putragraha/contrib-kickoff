@@ -1,4 +1,4 @@
-package com.nsystem.core.di
+package com.nsystem.features.usersearch.di
 
 import com.nsystem.features.usersearch.data.api.UserApi
 import dagger.Module

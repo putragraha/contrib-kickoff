@@ -77,32 +77,32 @@ data class User(
 
     @Json(name = "site_admin")
     @ColumnInfo(name = "site_admin")
-    val siteAdmin: String,
+    val siteAdmin: Boolean,
 
     @Json(name = "name")
-    val name: String,
+    val name: String?,
 
     @Json(name = "company")
-    val company: String,
+    val company: String?,
 
     @Json(name = "blog")
-    val blog: String,
+    val blog: String?,
 
     @Json(name = "location")
-    val location: String,
+    val location: String?,
 
     @Json(name = "email")
-    val email: String,
+    val email: String?,
 
     @Json(name = "hireable")
-    val hireable: String,
+    val hireable: Boolean?,
 
     @Json(name = "bio")
-    val bio: String,
+    val bio: String?,
 
     @Json(name = "twitter_username")
     @ColumnInfo(name = "twitter_username")
-    val twitterUsername: String,
+    val twitterUsername: String?,
 
     @Json(name = "public_repos")
     @ColumnInfo(name = "public_repos")
@@ -119,5 +119,5 @@ data class User(
     val following: Long,
 
     @Json(name = "score")
-    val score: Double
+    val score: Double?
 )
