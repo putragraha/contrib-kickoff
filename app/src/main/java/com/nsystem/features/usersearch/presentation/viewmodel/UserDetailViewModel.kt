@@ -12,6 +12,7 @@ import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
+// TODO: 03/01/22 Remove on User Detail Fragment removed 
 @HiltViewModel
 class UserDetailViewModel @Inject constructor(
     private val getUserUseCase: GetUserUseCase,

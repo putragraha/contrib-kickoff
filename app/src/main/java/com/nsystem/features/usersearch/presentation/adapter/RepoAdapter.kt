@@ -6,6 +6,7 @@ import androidx.recyclerview.widget.ListAdapter
 import com.nsystem.features.usersearch.data.model.Repo
 import com.nsystem.features.usersearch.presentation.viewholder.RepoViewHolder
 
+// TODO: 03/01/22 Modify for new implementation
 class RepoAdapter(
     var avatarUrl: String = ""
 ): ListAdapter<Repo, RepoViewHolder>(REPO_COMPARATOR) {

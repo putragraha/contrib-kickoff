@@ -9,7 +9,6 @@ import android.view.ViewGroup
 import androidx.core.widget.addTextChangedListener
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
-import androidx.navigation.fragment.findNavController
 import androidx.paging.ExperimentalPagingApi
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.RecyclerView
@@ -29,8 +28,7 @@ class UserListFragment: Fragment() {
 
     private val userAdapter by lazy {
         UserAdapter {
-            val action = UserListFragmentDirections.actionUserListFragmentToUserDetailFragment(it)
-            findNavController().navigate(action)
+            // TODO: 03/01/22 Navigate to browser
         }
     }
 
