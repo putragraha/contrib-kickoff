@@ -1,4 +1,17 @@
 <resources>
     <string name="app_name">Contributor Kickoff</string>
+    <string name="label_owner_name">\@%s</string>
+    <plurals name="label_star">
+        <item quantity="one">%d star</item>
+        <item quantity="other">%d stars</item>
+    </plurals>
+    <plurals name="label_fork">
+        <item quantity="one">%d fork</item>
+        <item quantity="other">%d forks</item>
+    </plurals>
+    <plurals name="label_issue">
+        <item quantity="one">%d open issue</item>
+        <item quantity="other">%d open issues</item>
+    </plurals>
     <string name="search_user">Search User</string>
 </resources>

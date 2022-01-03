@@ -2,42 +2,30 @@ package com.nsystem.features.usersearch.presentation.viewholder
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
-import com.bumptech.glide.Glide
 import com.nsystem.R
-import com.nsystem.databinding.ItemRepoOldBinding
-import com.nsystem.features.usersearch.data.model.RepoOld
+import com.nsystem.databinding.ItemRepoBinding
+import com.nsystem.features.usersearch.domain.model.Repo
 
-class RepoViewHolder(
-    avatarUrl: String,
-    private val binding: ItemRepoOldBinding
-): RecyclerView.ViewHolder(binding.root) {
+class RepoViewHolder(private val binding: ItemRepoBinding): RecyclerView.ViewHolder(binding.root) {
 
-    init {
-        binding.sivAvatar.loadImage(avatarUrl)
+    fun bind(repo: Repo) {
+        binding.tvRepoName.text = repo.fullName
+        binding.tvOwnerName.text = getText(R.string.label_owner_name, repo.ownerName)
+        binding.actvStar.text = getText(R.plurals.label_star, repo.starCount)
+        binding.actvFork.text = getText(R.plurals.label_fork, repo.forkCount)
+        binding.actvIssue.text = getText(R.plurals.label_issue, repo.openIssueCount)
     }
 
-    fun bind(repoOld: RepoOld) {
-        binding.tvProjectName.text = repoOld.projectName
-        binding.tvDescription.text = repoOld.description
-        binding.actvStar.text = repoOld.stars.toString()
-        binding.tvLastUpdated.text = repoOld.updatedAt
-    }
-
-    private fun ImageView.loadImage(url: String) {
-        Glide.with(itemView)
-            .load(url)
-            .into(this)
-    }
+    private fun getText(resId: Int, value: Any) = itemView.context.getString(resId, value)
 
     companion object {
 
-        fun create(avatarUrl: String, parent: ViewGroup): RepoViewHolder {
-            val binding = ItemRepoOldBinding.bind(
-                LayoutInflater.from(parent.context).inflate(R.layout.item_repo_old, parent, false)
+        fun create(parent: ViewGroup): RepoViewHolder {
+            val binding = ItemRepoBinding.bind(
+                LayoutInflater.from(parent.context).inflate(R.layout.item_repo, parent, false)
             )
-            return RepoViewHolder(avatarUrl, binding)
+            return RepoViewHolder(binding)
         }
     }
 }

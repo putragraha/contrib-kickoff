@@ -85,6 +85,7 @@ dependencies {
     kapt(Libraries.hiltCompiler)
 
     // Image Load
+    // TODO: 03/01/22 Remove Glide dependency
     implementation(Libraries.glide)
     kapt(Libraries.glideCompiler)
 
