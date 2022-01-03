@@ -6,12 +6,12 @@ import android.widget.ImageView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.nsystem.R
-import com.nsystem.databinding.ItemRepoBinding
+import com.nsystem.databinding.ItemRepoOldBinding
 import com.nsystem.features.usersearch.data.model.Repo
 
 class RepoViewHolder(
     avatarUrl: String,
-    private val binding: ItemRepoBinding
+    private val binding: ItemRepoOldBinding
 ): RecyclerView.ViewHolder(binding.root) {
 
     init {
@@ -34,8 +34,8 @@ class RepoViewHolder(
     companion object {
 
         fun create(avatarUrl: String, parent: ViewGroup): RepoViewHolder {
-            val binding = ItemRepoBinding.bind(
-                LayoutInflater.from(parent.context).inflate(R.layout.item_repo, parent, false)
+            val binding = ItemRepoOldBinding.bind(
+                LayoutInflater.from(parent.context).inflate(R.layout.item_repo_old, parent, false)
             )
             return RepoViewHolder(avatarUrl, binding)
         }
