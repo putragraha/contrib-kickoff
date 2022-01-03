@@ -13,16 +13,17 @@ import androidx.paging.ExperimentalPagingApi
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.RecyclerView
 import com.nsystem.R
-import com.nsystem.databinding.FragmentUserListBinding
+import com.nsystem.databinding.FragmentSearchRepoBinding
 import com.nsystem.features.usersearch.presentation.adapter.UserAdapter
 import com.nsystem.features.usersearch.presentation.viewmodel.UserSearchViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
 
+// TODO: 03/01/22 Remove on Search Repo Fragment ready
 @AndroidEntryPoint
 class UserListFragment: Fragment() {
 
-    private var binding: FragmentUserListBinding? = null
+    private var binding: FragmentSearchRepoBinding? = null
 
     private val viewModel by viewModels<UserSearchViewModel>()
 
@@ -37,7 +38,7 @@ class UserListFragment: Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        binding = FragmentUserListBinding.inflate(inflater, container, false)
+        binding = FragmentSearchRepoBinding.inflate(inflater, container, false)
         return binding?.root
     }
 

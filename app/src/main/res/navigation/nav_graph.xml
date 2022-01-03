@@ -2,10 +2,10 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/userListFragment">
+    app:startDestination="@id/searchRepoFragment">
 
     <fragment
-        android:id="@+id/userListFragment"
-        android:name="com.nsystem.features.usersearch.presentation.fragment.UserListFragment"
-        android:label="UserListFragment" />
+        android:id="@+id/searchRepoFragment"
+        android:name="com.nsystem.features.usersearch.presentation.fragment.SearchRepoFragment"
+        android:label="SearchRepoFragment" />
 </navigation>
