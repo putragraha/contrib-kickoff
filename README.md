@@ -1,5 +1,5 @@
-# GitHubUser
-GitHubUser application is an application to show list of GitHub User from [GitHub API](https://docs.github.com/en/rest/)
+# ContribKickoff
+ContribKickoff application is an application to show list of GitHub User from [GitHub API](https://docs.github.com/en/rest/)
 
 ### Getting Started ###
 - Create `credential.properties` in root folder of the project
