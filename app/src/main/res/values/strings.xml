@@ -13,5 +13,5 @@
         <item quantity="one">%d open issue</item>
         <item quantity="other">%d open issues</item>
     </plurals>
-    <string name="search_user">Search User</string>
+    <string name="search_repository">Search Repository</string>
 </resources>
