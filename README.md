@@ -1,5 +1,5 @@
 # ContribKickoff
-ContribKickoff application is an application to show list of GitHub User from [GitHub API](https://docs.github.com/en/rest/)
+ContribKickoff application is a research application. Used to show list of GitHub Repository obtained from [GitHub API](https://docs.github.com/en/rest/) with condition `help-wanted-issues`. List generated can be used to find an issue in several repository which requires fixes, may help to start a journey as an open source project contributor
 
 ### Getting Started ###
 - Create `credential.properties` in root folder of the project
