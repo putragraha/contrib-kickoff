@@ -7,7 +7,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.nsystem.R
 import com.nsystem.databinding.ItemRepoOldBinding
-import com.nsystem.features.usersearch.data.model.Repo
+import com.nsystem.features.usersearch.data.model.RepoOld
 
 class RepoViewHolder(
     avatarUrl: String,
@@ -18,11 +18,11 @@ class RepoViewHolder(
         binding.sivAvatar.loadImage(avatarUrl)
     }
 
-    fun bind(repo: Repo) {
-        binding.tvProjectName.text = repo.projectName
-        binding.tvDescription.text = repo.description
-        binding.actvStar.text = repo.stars.toString()
-        binding.tvLastUpdated.text = repo.updatedAt
+    fun bind(repoOld: RepoOld) {
+        binding.tvProjectName.text = repoOld.projectName
+        binding.tvDescription.text = repoOld.description
+        binding.actvStar.text = repoOld.stars.toString()
+        binding.tvLastUpdated.text = repoOld.updatedAt
     }
 
     private fun ImageView.loadImage(url: String) {

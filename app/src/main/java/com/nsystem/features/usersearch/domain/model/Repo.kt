@@ -1,6 +1,6 @@
 package com.nsystem.features.usersearch.domain.model
 
-interface RepoModel {
+interface Repo {
     val id: Long
     val fullName: String
     val ownerName: String

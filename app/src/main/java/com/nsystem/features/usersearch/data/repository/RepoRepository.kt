@@ -1,7 +1,7 @@
 package com.nsystem.features.usersearch.data.repository
 
 import com.nsystem.features.usersearch.data.api.RepoApi
-import com.nsystem.features.usersearch.data.model.Repo
+import com.nsystem.features.usersearch.data.model.RepoOld
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flowOf
 import javax.inject.Inject
@@ -11,9 +11,9 @@ class RepoRepository @Inject constructor(
     private val repoApi: RepoApi
 ) {
 
-    suspend fun getUserRepo(username: String): Flow<List<Repo>> {
+    suspend fun getUserRepo(username: String): Flow<List<RepoOld>> {
         val apiResponse = repoApi.getUserRepo(username, INITIAL_PAGE_INDEX, DEFAULT_PAGE_SIZE)
-        var repos = emptyList<Repo>()
+        var repos = emptyList<RepoOld>()
 
         if (apiResponse.isSuccessful) {
             repos = apiResponse.body() ?: emptyList()

@@ -1,6 +1,6 @@
 package com.nsystem.features.usersearch.data.api
 
-import com.nsystem.features.usersearch.data.model.Repo
+import com.nsystem.features.usersearch.data.model.RepoOld
 import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Path
@@ -13,5 +13,5 @@ interface RepoApi {
         @Path("username") username: String,
         @Query("page") page: Int,
         @Query("per_page") perPage: Int
-    ): Response<List<Repo>>
+    ): Response<List<RepoOld>>
 }

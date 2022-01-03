@@ -3,13 +3,13 @@ package com.nsystem.features.usersearch.presentation.adapter
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
-import com.nsystem.features.usersearch.data.model.Repo
+import com.nsystem.features.usersearch.data.model.RepoOld
 import com.nsystem.features.usersearch.presentation.viewholder.RepoViewHolder
 
 // TODO: 03/01/22 Modify for new implementation
 class RepoAdapter(
     var avatarUrl: String = ""
-): ListAdapter<Repo, RepoViewHolder>(REPO_COMPARATOR) {
+): ListAdapter<RepoOld, RepoViewHolder>(REPO_COMPARATOR) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RepoViewHolder {
         return RepoViewHolder.create(avatarUrl, parent)
@@ -20,12 +20,12 @@ class RepoAdapter(
     }
 
     companion object {
-        private val REPO_COMPARATOR = object : DiffUtil.ItemCallback<Repo>() {
-            override fun areItemsTheSame(oldItem: Repo, newItem: Repo): Boolean {
+        private val REPO_COMPARATOR = object : DiffUtil.ItemCallback<RepoOld>() {
+            override fun areItemsTheSame(oldItem: RepoOld, newItem: RepoOld): Boolean {
                 return oldItem.id == newItem.id
             }
 
-            override fun areContentsTheSame(oldItem: Repo, newItem: Repo): Boolean {
+            override fun areContentsTheSame(oldItem: RepoOld, newItem: RepoOld): Boolean {
                 return oldItem == newItem
             }
         }
