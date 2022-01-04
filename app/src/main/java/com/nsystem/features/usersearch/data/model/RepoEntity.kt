@@ -14,6 +14,9 @@ data class RepoEntity(
     @ColumnInfo(name = "full_name")
     override val fullName: String,
 
+    @ColumnInfo(name = "description")
+    override val description: String,
+
     @ColumnInfo(name = "owner_name")
     override val ownerName: String,
 
