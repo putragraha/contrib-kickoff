@@ -8,7 +8,8 @@ import androidx.room.PrimaryKey
 data class RepoRemoteKeysEntity(
 
     @PrimaryKey
-    val id: Long,
+    @ColumnInfo(name = "repo_id")
+    val repoId: Long,
 
     @ColumnInfo(name = "prev_key")
     val prevKey: Int?,
