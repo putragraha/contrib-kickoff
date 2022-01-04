@@ -7,6 +7,7 @@ import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import com.nsystem.features.usersearch.data.model.User
 
+// TODO: 04/01/22 Remove after application database no longer use these
 @Dao
 interface UserDao {
 
