@@ -13,7 +13,7 @@ interface RepoDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insertAll(repos: List<RepoEntity>)
 
-    @Query("SELECT * FROM repo WHERE full_name LIKE :queryString")
+    @Query("SELECT * FROM repo WHERE full_name LIKE :queryString OR description LIKE :queryString")
     fun searchRepo(queryString: String): PagingSource<Int, RepoEntity>
 
     @Query("DELETE FROM repo")
