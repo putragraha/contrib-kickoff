@@ -5,14 +5,18 @@ import androidx.room.RoomDatabase
 import com.nsystem.features.usersearch.data.dao.RepoDao
 import com.nsystem.features.usersearch.data.dao.UserDao
 import com.nsystem.features.usersearch.data.dao.UserRemoteKeysDao
+import com.nsystem.features.usersearch.data.model.RepoEntity
+import com.nsystem.features.usersearch.data.model.RepoRemoteKeysEntity
 import com.nsystem.features.usersearch.data.model.User
 import com.nsystem.features.usersearch.data.model.UserRemoteKeys
 
 @Database(
     entities = [
         User::class,
-        UserRemoteKeys::class
-               ],
+        RepoEntity::class,
+        UserRemoteKeys::class,
+        RepoRemoteKeysEntity::class
+    ],
     version = 1,
     exportSchema = false
 )
