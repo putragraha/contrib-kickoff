@@ -6,5 +6,5 @@ import kotlinx.coroutines.flow.Flow
 
 interface RepoRepository {
 
-    fun searchRepo(query: String): Flow<PagingData<Repo>>
+    suspend fun searchRepo(query: String): Flow<PagingData<Repo>>
 }
