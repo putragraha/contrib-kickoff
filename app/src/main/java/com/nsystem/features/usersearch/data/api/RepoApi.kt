@@ -12,7 +12,6 @@ interface RepoApi {
         @Query("q") query: String,
         @Query("page") page: Int,
         @Query("per_page") perPage: Int,
-        @Query("sort") sort: String,
-        @Query("order") order: String,
+        @Query("sort") sort: String
     ): Response<UserSearch>
 }
