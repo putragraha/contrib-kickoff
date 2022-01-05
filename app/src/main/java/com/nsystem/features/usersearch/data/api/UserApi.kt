@@ -8,6 +8,7 @@ import retrofit2.http.Path
 import retrofit2.http.Query
 
 
+// TODO: 05/01/22 Remove on no longer usage
 interface UserApi {
 
     @GET("search/users")

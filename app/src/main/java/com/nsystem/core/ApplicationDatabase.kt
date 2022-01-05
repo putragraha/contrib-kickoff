@@ -24,7 +24,7 @@ import com.nsystem.features.usersearch.data.model.UserRemoteKeys
 abstract class ApplicationDatabase: RoomDatabase() {
 
     abstract fun repoDao(): RepoDao
-    abstract fun userDao(): UserDao
+    abstract fun userDao(): UserDao // TODO: 05/01/22 Remove on no longer usage
     abstract fun userRemoteKeysDaoDao(): UserRemoteKeysDao
     abstract fun repoRemoteKeysDao(): RepoRemoteKeysDao
 }

@@ -12,6 +12,7 @@ import com.nsystem.features.usersearch.data.model.UserRemoteKeys
 import retrofit2.HttpException
 import java.io.IOException
 
+// TODO: 05/01/22 Remove on no longer usage
 @ExperimentalPagingApi
 class UserSearchRemoteMediator(
     private val query: String,
