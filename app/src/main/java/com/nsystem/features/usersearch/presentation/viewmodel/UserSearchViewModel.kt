@@ -12,6 +12,7 @@ import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.collect
 import javax.inject.Inject
 
+// TODO: 05/01/22 Remove after Fragment removed
 @HiltViewModel
 class UserSearchViewModel @Inject constructor(
     private val searchUserUseCase: SearchUserUseCase
