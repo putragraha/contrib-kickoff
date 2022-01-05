@@ -12,13 +12,13 @@ data class RepoEntity(
     override val id: Long,
 
     @ColumnInfo(name = "full_name")
-    override val fullName: String,
+    override val fullName: String?,
 
     @ColumnInfo(name = "description")
-    override val description: String,
+    override val description: String?,
 
     @ColumnInfo(name = "owner_name")
-    override val ownerName: String,
+    override val ownerName: String?,
 
     @ColumnInfo(name = "star_count")
     override val starCount: Int,
@@ -30,5 +30,5 @@ data class RepoEntity(
     override val openIssueCount: Int,
 
     @ColumnInfo(name = "repository_url")
-    override val repositoryUrl: String
+    override val repositoryUrl: String?
 ): Repo
