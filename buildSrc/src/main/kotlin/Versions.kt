@@ -26,9 +26,6 @@ object Versions {
     // Dependency Injection
     const val hiltVersion = "2.36"
 
-    // Image Load
-    const val glideVersion = "4.12.0"
-
     // Paging
     const val pagingVersion = "3.1.0"
 
