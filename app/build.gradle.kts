@@ -62,7 +62,7 @@ dependencies {
     implementation(Libraries.multidex)
 
     // Design
-    implementation(Libraries.materialDesign)
+    implementation(Libraries.materialDesign) // TODO: 05/01/22 Remove material dependency 
     implementation(Libraries.constraintLayout)
 
     // Navigation
