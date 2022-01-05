@@ -11,6 +11,7 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flowOf
 import javax.inject.Inject
 
+// TODO: 05/01/22 Remove after use case removed and repo repository is finished
 class UserSearchRepository @Inject constructor(
     private val applicationDatabase: ApplicationDatabase,
     private val userApi: UserApi
