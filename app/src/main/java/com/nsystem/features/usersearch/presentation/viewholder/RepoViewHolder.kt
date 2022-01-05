@@ -11,7 +11,9 @@ class RepoViewHolder(private val binding: ItemRepoBinding): RecyclerView.ViewHol
 
     fun bind(repo: Repo) {
         binding.tvRepoName.text = repo.fullName
-        binding.tvOwnerName.text = getText(R.string.label_owner_name, repo.ownerName)
+        repo.ownerName?.let { ownerName ->
+            binding.tvOwnerName.text = getText(R.string.label_owner_name, ownerName)
+        }
         binding.actvStar.text = getText(R.plurals.label_star, repo.starCount)
         binding.actvFork.text = getText(R.plurals.label_fork, repo.forkCount)
         binding.actvIssue.text = getText(R.plurals.label_issue, repo.openIssueCount)
