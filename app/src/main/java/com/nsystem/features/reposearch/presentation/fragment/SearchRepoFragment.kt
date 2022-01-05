@@ -45,7 +45,7 @@ class SearchRepoFragment: Fragment() {
     private fun getRepoListDivider(): DividerItemDecoration {
         val dividerDrawable = ResourcesCompat.getDrawable(
             resources,
-            R.drawable.layer_user_list_divider,
+            R.drawable.layer_repo_list_divider,
             null
         )
 
