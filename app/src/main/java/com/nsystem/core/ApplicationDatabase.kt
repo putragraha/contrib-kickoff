@@ -25,6 +25,6 @@ abstract class ApplicationDatabase: RoomDatabase() {
 
     abstract fun repoDao(): RepoDao
     abstract fun userDao(): UserDao // TODO: 05/01/22 Remove on no longer usage
-    abstract fun userRemoteKeysDaoDao(): UserRemoteKeysDao
+    abstract fun userRemoteKeysDaoDao(): UserRemoteKeysDao // TODO: 05/01/22 Remove on no longer usage
     abstract fun repoRemoteKeysDao(): RepoRemoteKeysDao
 }

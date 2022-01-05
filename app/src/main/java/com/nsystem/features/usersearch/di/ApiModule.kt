@@ -13,6 +13,7 @@ import retrofit2.Retrofit
 @InstallIn(ViewModelComponent::class)
 class ApiModule {
 
+    // TODO: 05/01/22 Remove on no longer usage
     @Provides
     @ViewModelScoped
     fun provideUserApi(retrofit: Retrofit) = retrofit.create(UserApi::class.java)
