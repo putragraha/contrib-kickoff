@@ -4,27 +4,16 @@ import androidx.room.Database
 import androidx.room.RoomDatabase
 import com.nsystem.features.usersearch.data.dao.RepoDao
 import com.nsystem.features.usersearch.data.dao.RepoRemoteKeysDao
-import com.nsystem.features.usersearch.data.dao.UserDao
-import com.nsystem.features.usersearch.data.dao.UserRemoteKeysDao
 import com.nsystem.features.usersearch.data.model.RepoEntity
 import com.nsystem.features.usersearch.data.model.RepoRemoteKeysEntity
-import com.nsystem.features.usersearch.data.model.User
-import com.nsystem.features.usersearch.data.model.UserRemoteKeys
 
 @Database(
-    entities = [
-        User::class,
-        RepoEntity::class,
-        UserRemoteKeys::class,
-        RepoRemoteKeysEntity::class
-    ],
+    entities = [RepoEntity::class, RepoRemoteKeysEntity::class],
     version = 1,
     exportSchema = false
 )
 abstract class ApplicationDatabase: RoomDatabase() {
 
     abstract fun repoDao(): RepoDao
-    abstract fun userDao(): UserDao // TODO: 05/01/22 Remove on no longer usage
-    abstract fun userRemoteKeysDaoDao(): UserRemoteKeysDao // TODO: 05/01/22 Remove on no longer usage
     abstract fun repoRemoteKeysDao(): RepoRemoteKeysDao
 }

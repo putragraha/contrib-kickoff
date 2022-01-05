@@ -3,6 +3,7 @@ package com.nsystem.features.usersearch.data.model
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
 
+// TODO: 05/01/22 Remove on no longer used
 @JsonClass(generateAdapter = true)
 data class UserSearchItems(
     @Json(name = "login") val login: String,

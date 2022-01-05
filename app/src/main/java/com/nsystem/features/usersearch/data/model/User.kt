@@ -6,6 +6,7 @@ import androidx.room.PrimaryKey
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
 
+// TODO: 05/01/22 Remove on no longer used
 @Entity(tableName = "user")
 @JsonClass(generateAdapter = true)
 data class User(
