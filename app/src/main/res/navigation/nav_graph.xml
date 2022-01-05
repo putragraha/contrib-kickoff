@@ -6,6 +6,6 @@
 
     <fragment
         android:id="@+id/searchRepoFragment"
-        android:name="com.nsystem.features.usersearch.presentation.fragment.SearchRepoFragment"
+        android:name="com.nsystem.features.reposearch.presentation.fragment.SearchRepoFragment"
         android:label="SearchRepoFragment" />
 </navigation>
