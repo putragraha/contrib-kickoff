@@ -22,8 +22,9 @@ android {
     }
 
     buildTypes {
-        val userAgent = "\"${CredentialHelper.getValue(CredentialHelper.KEY_USER_AGENT)}\""
-        val oauthToken = "\"${CredentialHelper.getValue(CredentialHelper.KEY_OAUTH_TOKEN)}\""
+        val properties = CredentialHelper.getCredentialProperties(rootDir.absolutePath)
+        val userAgent = "\"${properties.getProperty(CredentialHelper.KEY_USER_AGENT)}\""
+        val oauthToken = "\"${properties.getProperty(CredentialHelper.KEY_OAUTH_TOKEN)}\""
 
         getByName("debug") {
             buildConfigField("String", CredentialHelper.KEY_USER_AGENT, userAgent)

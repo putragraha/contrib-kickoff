@@ -8,13 +8,7 @@ object CredentialHelper {
 
     const val KEY_OAUTH_TOKEN = "OAUTH_TOKEN"
 
-    private val properties by lazy {
-        Properties().apply {
-            load(FileInputStream(File("credential.properties")))
-        }
-    }
-
-    fun getValue(key: String): String {
-        return properties.getProperty(key)
+    fun getCredentialProperties(rootDir: String) = Properties().apply {
+        load(FileInputStream(File("$rootDir/credential.properties")))
     }
 }
