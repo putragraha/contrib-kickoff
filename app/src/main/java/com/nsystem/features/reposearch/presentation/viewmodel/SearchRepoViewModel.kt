@@ -27,10 +27,11 @@ import kotlinx.coroutines.flow.onStart
 import kotlinx.coroutines.flow.shareIn
 import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.launch
+import javax.inject.Inject
 
 @OptIn(FlowPreview::class, ExperimentalCoroutinesApi::class)
 @HiltViewModel
-class SearchRepoViewModel(
+class SearchRepoViewModel @Inject constructor(
     private val getRepoUseCase: GetRepoUseCase,
     private val savedStateHandle: SavedStateHandle
 ): ViewModel() {
