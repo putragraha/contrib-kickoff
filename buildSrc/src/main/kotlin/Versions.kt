@@ -25,6 +25,7 @@ object Versions {
 
     // Dependency Injection
     const val hiltVersion = "2.36"
+    const val androidxHiltVersion = "1.0.0"
 
     // Paging
     const val pagingVersion = "3.1.0"

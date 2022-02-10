@@ -84,6 +84,7 @@ dependencies {
 
     // Dependency Injection
     implementation (Libraries.hilt)
+    implementation (Libraries.hiltNavigationFragment)
     kapt(Libraries.hiltCompiler)
 
     // Paging

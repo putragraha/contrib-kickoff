@@ -42,6 +42,8 @@ object Libraries {
     // Dependency Injection
     const val hilt = "com.google.dagger:hilt-android:${Versions.hiltVersion}"
     const val hiltCompiler = "com.google.dagger:hilt-compiler:${Versions.hiltVersion}"
+    const val hiltNavigationFragment =
+        "androidx.hilt:hilt-navigation-fragment:${Versions.androidxHiltVersion}"
 
     // Paging
     const val paging = "androidx.paging:paging-runtime:${Versions.pagingVersion}"
