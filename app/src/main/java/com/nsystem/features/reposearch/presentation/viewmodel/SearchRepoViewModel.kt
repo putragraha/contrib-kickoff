@@ -49,7 +49,7 @@ class SearchRepoViewModel @Inject constructor(
         val searchFlow = actionSharedFlow
             .filterIsInstance<SearchRepoUiAction.Search>()
             .distinctUntilChanged()
-            .debounce(1_000)
+            .debounce(1_500)
             .onStart { emit(SearchRepoUiAction.Search(initialQuery)) }
         val queriesScrolledFlow = actionSharedFlow
             .filterIsInstance<SearchRepoUiAction.Scroll>()
