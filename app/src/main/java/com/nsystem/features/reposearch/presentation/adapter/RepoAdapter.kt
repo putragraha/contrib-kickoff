@@ -3,32 +3,48 @@ package com.nsystem.features.reposearch.presentation.adapter
 import android.view.ViewGroup
 import androidx.paging.PagingDataAdapter
 import androidx.recyclerview.widget.DiffUtil
-import com.nsystem.features.reposearch.domain.model.Repo
+import com.nsystem.features.reposearch.presentation.model.SearchRepoUiModel
 import com.nsystem.features.reposearch.presentation.viewholder.RepoViewHolder
 
-class RepoAdapter(
-    private val itemClick: (String) -> Unit
-): PagingDataAdapter<Repo, RepoViewHolder>(REPO_COMPARATOR) {
+class RepoAdapter: PagingDataAdapter<SearchRepoUiModel, RepoViewHolder>(REPO_COMPARATOR) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RepoViewHolder {
         return RepoViewHolder.create(parent)
     }
 
     override fun onBindViewHolder(holder: RepoViewHolder, position: Int) {
-        val repo = getItem(position)
-        repo?.let {
-            holder.bind(repo)
+        when (val uiModel = getItem(position)) {
+            is SearchRepoUiModel.RepoItem -> holder.bind(uiModel.repo)
         }
     }
 
     companion object {
-        private val REPO_COMPARATOR = object : DiffUtil.ItemCallback<Repo>() {
-            override fun areItemsTheSame(oldItem: Repo, newItem: Repo): Boolean {
-                return oldItem.id == newItem.id
+        private val REPO_COMPARATOR = object : DiffUtil.ItemCallback<SearchRepoUiModel>() {
+
+            override fun areItemsTheSame(
+                oldItem: SearchRepoUiModel,
+                newItem: SearchRepoUiModel
+            ): Boolean {
+                return when {
+                    oldItem is SearchRepoUiModel.RepoItem
+                            && newItem is SearchRepoUiModel.RepoItem -> {
+                        oldItem.repo.id == newItem.repo.id
+                    }
+                    else -> false
+                }
             }
 
-            override fun areContentsTheSame(oldItem: Repo, newItem: Repo): Boolean {
-                return oldItem.fullName == newItem.fullName
+            override fun areContentsTheSame(
+                oldItem: SearchRepoUiModel,
+                newItem: SearchRepoUiModel
+            ): Boolean {
+                return when {
+                    oldItem is SearchRepoUiModel.RepoItem
+                            && newItem is SearchRepoUiModel.RepoItem -> {
+                        oldItem.repo == newItem.repo
+                    }
+                    else -> false
+                }
             }
         }
     }

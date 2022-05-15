@@ -9,4 +9,5 @@ interface Repo {
     val forkCount: Int
     val openIssueCount: Int
     val repositoryUrl: String?
+    override fun equals(other: Any?): Boolean
 }
