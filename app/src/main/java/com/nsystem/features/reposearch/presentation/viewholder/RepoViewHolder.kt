@@ -15,13 +15,17 @@ class RepoViewHolder(private val binding: ItemRepoBinding): RecyclerView.ViewHol
         if (ownerName.isBlank()) binding.tvOwnerName.isVisible = false
 
         binding.tvRepoName.text = repo.fullName
-        binding.tvOwnerName.text = getText(R.string.label_owner_name, ownerName)
-        binding.actvStar.text = getText(R.plurals.label_star, repo.starCount)
-        binding.actvFork.text = getText(R.plurals.label_fork, repo.forkCount)
-        binding.actvIssue.text = getText(R.plurals.label_issue, repo.openIssueCount)
+        binding.tvOwnerName.text = getString(R.string.label_owner_name, ownerName)
+        binding.actvStar.text = getQuantityString(R.plurals.label_star, repo.starCount)
+        binding.actvFork.text = getQuantityString(R.plurals.label_fork, repo.forkCount)
+        binding.actvIssue.text = getQuantityString(R.plurals.label_issue, repo.openIssueCount)
     }
 
-    private fun getText(resId: Int, value: Any) = itemView.context.getString(resId, value)
+    private fun getString(resId: Int, value: String) = itemView.context.getString(resId, value)
+
+    private fun getQuantityString(resId: Int, value: Int): CharSequence {
+        return itemView.context.resources.getQuantityString(resId, value, value)
+    }
 
     companion object {
 
