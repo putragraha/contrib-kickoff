@@ -15,7 +15,7 @@ import javax.inject.Inject
 class RepoDataRepository @Inject constructor(
     private val applicationDatabase: ApplicationDatabase,
     private val repoApi: RepoApi
-): RepoRepository<RepoEntity> {
+): RepoRepository {
 
     override suspend fun searchRepo(query: String): Flow<PagingData<RepoEntity>> {
         val dbQuery = "%${query.replace(' ', '%')}%"
