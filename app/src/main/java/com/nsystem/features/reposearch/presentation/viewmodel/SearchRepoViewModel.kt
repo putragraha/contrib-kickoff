@@ -20,6 +20,7 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.debounce
 import kotlinx.coroutines.flow.distinctUntilChanged
+import kotlinx.coroutines.flow.filter
 import kotlinx.coroutines.flow.filterIsInstance
 import kotlinx.coroutines.flow.flatMapLatest
 import kotlinx.coroutines.flow.map
@@ -51,6 +52,7 @@ class SearchRepoViewModel @Inject constructor(
             .distinctUntilChanged()
             .debounce(1_500)
             .onStart { emit(SearchRepoUiAction.Search(initialQuery)) }
+            .filter { it.query.isNotBlank() }
         val queriesScrolledFlow = actionSharedFlow
             .filterIsInstance<SearchRepoUiAction.Scroll>()
             .distinctUntilChanged()
