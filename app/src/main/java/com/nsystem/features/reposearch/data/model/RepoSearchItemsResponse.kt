@@ -79,6 +79,6 @@ data class RepoSearchItemsResponse(
     @Json(name = "forks") val forks: Int,
     @Json(name = "open_issues") val openIssues: Int,
     @Json(name = "watchers") val watchers: Int,
-    @Json(name = "default_branch") val defaultBranch: Int,
+    @Json(name = "default_branch") val defaultBranch: String,
     @Json(name = "score") val score: Int
 )
