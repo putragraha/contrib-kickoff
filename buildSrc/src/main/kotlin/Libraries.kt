@@ -32,6 +32,8 @@ object Libraries {
         "com.squareup.retrofit2:converter-moshi:${Versions.retrofitVersion}"
     const val moshi = "com.squareup.moshi:moshi-kotlin:${Versions.moshiVersion}"
     const val moshiCodeGen = "com.squareup.moshi:moshi-kotlin-codegen:${Versions.moshiVersion}"
+    const val okhttpLoggingInterceptor =
+        "com.squareup.okhttp3:logging-interceptor:${Versions.okhttpLoggingVersion}"
 
     // Room
     const val roomKtx = "androidx.room:room-ktx:${Versions.roomVersion}"

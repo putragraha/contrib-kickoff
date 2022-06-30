@@ -18,6 +18,7 @@ object Versions {
 
     // Network
     const val retrofitVersion = "2.9.0"
+    const val okhttpLoggingVersion = "4.10.0"
     const val moshiVersion = "1.12.0"
 
     // Room

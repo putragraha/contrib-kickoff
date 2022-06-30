@@ -63,7 +63,7 @@ dependencies {
     implementation(Libraries.multidex)
 
     // Design
-    implementation(Libraries.materialDesign) // TODO: 05/01/22 Remove material dependency 
+    implementation(Libraries.materialDesign) // TODO: 05/01/22 Remove material dependency
     implementation(Libraries.constraintLayout)
 
     // Navigation
@@ -74,6 +74,7 @@ dependencies {
     implementation(Libraries.retrofit)
     implementation(Libraries.retrofitConverterMoshi)
     implementation(Libraries.moshi)
+    implementation(Libraries.okhttpLoggingInterceptor)
     kapt(Libraries.moshiCodeGen)
 
     // Room
